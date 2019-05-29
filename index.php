@@ -125,25 +125,61 @@
   </head>
   <body>
     
-    <div id="error"> <?php  echo $error; ?> </div>
+    <div class="container">
 
-    <form method="post">
-        <input type="email" name="email" placeholder="Enter your email">
-        <input type="password" name="password" placeholder="Enter your password">
-        <input type="checkbox" name="stayLoggedIn" value=1 >
-        <input type="hidden" name="signUp" value="1">
-        <input type="submit" name="submit" value="Sign up!" >
+        <h1> The Keeper of Secrets </h1> 
 
-    </form>
 
-    <form method="post">
-        <input type="email" name="email" placeholder="Enter your email">
-        <input type="password" name="password" placeholder="Enter your password">
-        <input type="checkbox" name="stayLoggedIn" value=1 >
-        <input type="hidden" name="logIn" value="0">
-        <input type="submit" name="submit" value="Log in!!" >
+        <div id="error"> <?php  echo $error; ?> </div>
 
-    </form>
+        <form method="post">
+            <fieldset class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Enter your email">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Enter your password">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="checkbox" name="stayLoggedIn" value=1 >
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="hidden" name="signUp" value="1">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="btn btn-success"  type="submit" name="submit" value="Sign up!" >
+            </fieldset>
+
+        </form>
+
+        <form method="post">
+        <fieldset class="form-group">
+            <input  class="form-control" type="email" name="email" placeholder="Enter your email">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Enter your password">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="checkbox" name="stayLoggedIn" value=1 >
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="form-control" type="hidden" name="signUp" value="1">
+            </fieldset>
+
+            <fieldset class="form-group">
+            <input class="btn btn-success" type="submit" name="submit" value="Log In!" >
+            </fieldset>
+
+        </form>
+    </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
