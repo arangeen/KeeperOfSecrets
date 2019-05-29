@@ -141,16 +141,21 @@
             <input class="form-control" type="password" name="password" placeholder="Enter your password">
             </fieldset>
 
-            <fieldset class="form-group">
-            <input class="form-control" type="checkbox" name="stayLoggedIn" value=1 >
+
+            <div class= "checkbox">
+            <label>
+            <input type="checkbox" name="stayLoggedIn" value=1 >
+            Stay Logged in 
+            </label>
             </fieldset>
+            </div>
 
             <fieldset class="form-group">
             <input class="form-control" type="hidden" name="signUp" value="1">
             </fieldset>
 
             <fieldset class="form-group">
-            <input class="btn btn-success"  type="submit" name="submit" value="Sign up!" >
+            <input class="btn btn-success" type="submit" name="submit" value="Sign up!" >
             </fieldset>
 
         </form>
@@ -164,9 +169,13 @@
             <input class="form-control" type="password" name="password" placeholder="Enter your password">
             </fieldset>
 
-            <fieldset class="form-group">
-            <input class="form-control" type="checkbox" name="stayLoggedIn" value=1 >
+            <div class= "checkbox">
+            <label>
+            <input type="checkbox" name="stayLoggedIn" value=1 >
+            Stay Logged in 
+            </label>
             </fieldset>
+            </div>
 
             <fieldset class="form-group">
             <input class="form-control" type="hidden" name="signUp" value="1">
