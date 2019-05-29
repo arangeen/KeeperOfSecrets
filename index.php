@@ -40,10 +40,16 @@
                  if(!mysqli_query($link , $query)) {
                      $error = "<p> Could not sign you up. Please try again later. </p> "; 
                  }else {
-                    echo "Sign up successful!";
+                    $query = "UPDATE 'users' SET password = 
+                    '".md5(md5(mysqli_insert_id()). $_POST['password'])."'
+                    WHERE id = ".mysqli_insert_id($link)." LIMIT 1"; 
+
+                    mysqli_query($link, $query); 
+                    echo "sign up succcessful"; 
+
                  }
             }
-        }
+        } 
     }
 
 
