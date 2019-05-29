@@ -1,5 +1,8 @@
 <?php
 
+    //start session 
+    session_start(); 
+
     if(array_key_exists("submit", $_POST)) {
         
         // connect to database
@@ -45,6 +48,14 @@
                     WHERE id = ".mysqli_insert_id($link)." LIMIT 1"; 
 
                     mysqli_query($link, $query); 
+
+                    // keep session if stay logged in is selected 
+                    $_SESSION['id'] = mysqli_insert_id($link); 
+                    if($_POST['stayLoggedIn'] == '1'){
+                        // we will save it for an hour for now. can do a year by multiple it all by 365
+                        setcookie("id", mysqli_insert_id($link), time()+ 60*60*24)
+                    }
+                    header("Location: loggedinPage.php"); 
                     echo "sign up succcessful"; 
 
                  }
