@@ -1,5 +1,5 @@
 <?php
-
+     $error = "";
     //start session 
     session_start(); 
 
@@ -15,7 +15,7 @@
 
 
 
-        $error = "";
+       
         if(!$_POST['email']){
             //append to the error if email hasnt been put
             $error .= "An email address is required <br>";
@@ -53,7 +53,7 @@
                     $_SESSION['id'] = mysqli_insert_id($link); 
                     if($_POST['stayLoggedIn'] == '1'){
                         // we will save it for an hour for now. can do a year by multiple it all by 365
-                        setcookie("id", mysqli_insert_id($link), time()+ 60*60*24)
+                        setcookie("id", mysqli_insert_id($link), time()+ 60*60*24);
                     }
                     header("Location: loggedinPage.php"); 
                     echo "sign up succcessful"; 
