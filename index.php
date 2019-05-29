@@ -1,5 +1,21 @@
 <?php
-     $error = "";
+    $error = "";
+
+     //log user out 
+    if(array_key_exists("logout", $_GET)) {
+
+        unset($_SESSION); 
+        setcookie("id", "", time() - 60*60); 
+        $_COOKIE["id"] = ""; 
+    }else if((array_key_exists("id", $_SESSION) AND $_SESSION['id']) 
+    OR (array_key_exists("id", $_COOKIE) AND $_SESSION['id'])){
+
+        // if users are logged in, they will be redirected to loggedinPage
+        header("Location: loggedinPage.php"); 
+
+    }
+
+
     //start session 
     session_start(); 
 
